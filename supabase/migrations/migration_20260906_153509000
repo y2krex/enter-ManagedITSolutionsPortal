@@ -1,0 +1,21 @@
+-- Cloud.Lab brochure contact form submissions table
+create table if not exists public.contact_submissions (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  company text,
+  email text not null,
+  phone text,
+  message text not null,
+  created_at timestamptz not null default now()
+);
+
+-- RLS enabled in the same migration that creates the table
+alter table public.contact_submissions enable row level security;
+
+-- Public visitors may submit the form (INSERT only).
+-- No SELECT/UPDATE/DELETE policies: rows are visible only to the project owner via the backend.
+create policy "allow anonymous insert"
+  on public.contact_submissions
+  for insert
+  to anon, authenticated
+  with check (true);

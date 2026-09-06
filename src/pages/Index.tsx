@@ -1,21 +1,31 @@
-import { useTranslation } from "react-i18next";
+import { Navbar } from "@/components/brochure/navbar";
+import { Hero } from "@/components/brochure/hero";
+import { Stats } from "@/components/brochure/stats";
+import { Services } from "@/components/brochure/services";
+import { WhyUs } from "@/components/brochure/why-us";
+import { HowItWorks } from "@/components/brochure/how-it-works";
+import { Testimonials } from "@/components/brochure/testimonials";
+import { Pricing } from "@/components/brochure/pricing";
+import { FAQ } from "@/components/brochure/faq";
+import { Contact } from "@/components/brochure/contact";
+import { Footer } from "@/components/brochure/footer";
 
 const Index = () => {
-  const { t } = useTranslation();
-
   return (
-    <div className="relative flex h-full w-full flex-col bg-gradient-to-b from-[#4E54C8] to-[#A8C0FF] p-[32px] max-md:pb-[32px] max-md:pl-[20px] max-md:pr-[20px] max-md:pt-[32px]">
-      <div className="text-[26px] text-white max-md:text-[22px]">
-        {t("common.appName")}
-      </div>
-      <div className="flex h-full flex-1 flex-col items-center justify-center">
-        <div className="text-center text-[48px] text-white max-md:text-[26px]">
-          {t("home.hero.title")}
-        </div>
-        <div className="text-center text-[24px] text-white max-md:text-[16px]">
-          {t("home.hero.subtitle")}
-        </div>
-      </div>
+    <div className="relative min-h-screen w-full bg-background">
+      <Navbar />
+      <main>
+        <Hero />
+        <Stats />
+        <Services />
+        <WhyUs />
+        <HowItWorks />
+        <Testimonials />
+        <Pricing />
+        <FAQ />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 };
