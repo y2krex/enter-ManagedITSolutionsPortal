@@ -26,9 +26,9 @@ export const Hero = () => {
           className="animate-fade-up mt-8 max-w-4xl font-display text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl"
           style={{ animationDelay: "120ms" }}
         >
-          Your Technology,
+          Technology
           <br />
-          <span className="text-gradient-brand">Expertly Managed.</span>
+          <span className="text-gradient-brand">Lives Here!</span>
         </h1>
 
         <p
