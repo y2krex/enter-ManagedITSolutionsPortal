@@ -18,10 +18,10 @@ export const Navbar = () => {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-xl">
       <nav className="container flex h-16 items-center justify-between gap-4">
         <a href="#top" className="group flex items-center gap-2.5">
-          <span className="glow-primary flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-glow to-brand-deep text-primary-foreground">
-            <CloudCog className="h-5 w-5" strokeWidth={2} />
+          <span className="glow-primary flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-brand-glow to-brand-deep text-primary-foreground">
+            <CloudCog className="h-6 w-6" strokeWidth={2} />
           </span>
-          <span className="font-display text-lg font-bold tracking-tight text-foreground">
+          <span className="font-display text-xl font-bold tracking-tight text-foreground">
             Cloud<span className="text-brand-glow">.Lab</span>
           </span>
         </a>
