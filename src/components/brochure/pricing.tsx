@@ -57,7 +57,7 @@ export const Pricing = () => {
       <div className="container relative z-10">
         <SectionHeading
           eyebrow="Managed Services"
-          title="Simple, Flat-Rate Pricing"
+          title="Simple, Flat-Rate Managed Services"
           description="No hidden fees, no surprise invoices. One predictable monthly cost covers your entire IT stack."
         />
 
