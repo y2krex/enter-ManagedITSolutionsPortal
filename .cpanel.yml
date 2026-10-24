@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/clouddotlabcom/public_html/enterpro
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -R /home2/clouddotlabcom/enter-ManagedITSolutionsPortal/dist/* $DEPLOYPATH
