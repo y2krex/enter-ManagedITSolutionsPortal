@@ -111,6 +111,11 @@ body,
   height: 100%;
 }
 
+/* Keep scroll targets clear of the fixed navbar */
+html {
+  scroll-padding-top: 5rem;
+}
+
 @layer utilities {
   /* Gradient + glow helpers using semantic tokens */
   .text-gradient-brand {

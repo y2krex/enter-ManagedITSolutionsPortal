@@ -1,4 +1,5 @@
 import Index from "./pages/Index";
+import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
 
 export const routers = [
@@ -6,6 +7,11 @@ export const routers = [
     path: "/",
     name: "home",
     element: <Index />,
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    element: <ContactPage />,
   },
   /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */
   {

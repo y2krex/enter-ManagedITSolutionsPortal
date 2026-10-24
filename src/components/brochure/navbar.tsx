@@ -1,14 +1,16 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { CloudCog, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Managed Services", href: "#managed-services" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Services", href: "/#services" },
+  { label: "Why Us", href: "/#why-us" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Managed Services", href: "/#managed-services" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const Navbar = () => {
@@ -17,31 +19,31 @@ export const Navbar = () => {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-xl">
       <nav className="container flex h-16 items-center justify-between gap-4">
-        <a href="#top" className="group flex items-center gap-2.5">
+        <Link to="/" className="group flex items-center gap-2.5">
           <span className="glow-primary flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-brand-glow to-brand-deep text-primary-foreground">
             <CloudCog className="h-6 w-6" strokeWidth={2} />
           </span>
           <span className="font-display text-xl font-bold tracking-tight text-foreground">
             Cloud<span className="text-brand-glow">.Lab</span>
           </span>
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-1 whitespace-nowrap lg:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
-                href={link.href}
-                className="whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              <Link
+                to={link.href}
+                className="whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
         <div className="hidden lg:block">
           <Button asChild size="sm" className="glow-soft">
-            <a href="#contact">Get a Free Audit</a>
+            <Link to="/contact">Get a Free Audit</Link>
           </Button>
         </div>
 
@@ -65,20 +67,20 @@ export const Navbar = () => {
         <ul className="flex flex-col gap-1 px-4 py-4">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
-                href={link.href}
+              <Link
+                to={link.href}
                 onClick={() => setOpen(false)}
                 className="block rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
           <li className="pt-2">
             <Button asChild className="w-full">
-              <a href="#contact" onClick={() => setOpen(false)}>
+              <Link to="/contact" onClick={() => setOpen(false)}>
                 Get a Free Audit
-              </a>
+              </Link>
             </Button>
           </li>
         </ul>

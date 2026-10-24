@@ -1,31 +1,31 @@
+import { Link } from "react-router-dom";
 import { CloudCog, Linkedin, Twitter, Youtube } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const columns = [
   {
     title: "Services",
     links: [
-      { label: "Managed IT Support", href: "#services" },
-      { label: "Cybersecurity", href: "#services" },
-      { label: "Cloud & Infrastructure", href: "#services" },
-      { label: "Backup & DR", href: "#services" },
-      { label: "Compliance", href: "#services" },
+      { label: "Managed IT Support", href: "/#services" },
+      { label: "Cybersecurity", href: "/#services" },
+      { label: "Cloud & Infrastructure", href: "/#services" },
+      { label: "Backup & DR", href: "/#services" },
+      { label: "Compliance", href: "/#services" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "Why Cloud.Lab", href: "#why-us" },
-      { label: "How It Works", href: "#how-it-works" },
-      { label: "Managed Services", href: "#managed-services" },
-      { label: "FAQ", href: "#faq" },
-      { label: "Contact", href: "#contact" },
+      { label: "Why Cloud.Lab", href: "/#why-us" },
+      { label: "How It Works", href: "/#how-it-works" },
+      { label: "Managed Services", href: "/#managed-services" },
+      { label: "FAQ", href: "/#faq" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Free IT Audit", href: "#contact" },
+      { label: "Free IT Audit", href: "/contact" },
       { label: "Security Guide", href: "#" },
       { label: "Status Page", href: "#" },
       { label: "Client Login", href: "#" },
@@ -46,14 +46,14 @@ export const Footer = () => {
       <div className="container py-16">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <a href="#top" className="flex items-center gap-2.5">
+            <Link to="/" className="flex items-center gap-2.5">
               <span className="glow-primary flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-brand-glow to-brand-deep text-primary-foreground">
                 <CloudCog className="h-6 w-6" strokeWidth={2} />
               </span>
               <span className="font-display text-xl font-bold tracking-tight text-foreground">
                 Cloud<span className="text-brand-glow">.Lab</span>
               </span>
-            </a>
+            </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
               Your technology, expertly managed. Proactive IT operations,
               hardened security, and 24/7 support for modern businesses.
@@ -80,15 +80,21 @@ export const Footer = () => {
               <ul className="mt-4 flex flex-col gap-2.5">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className={cn(
-                        "text-sm text-muted-foreground transition-colors hover:text-brand-glow",
-                        link.href === "#" && "cursor-default opacity-70 hover:text-muted-foreground",
-                      )}
-                    >
-                      {link.label}
-                    </a>
+                    {link.href === "#" ? (
+                      <a
+                        href="#"
+                        className="cursor-default text-sm text-muted-foreground opacity-70"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={link.href}
+                        className="text-sm text-muted-foreground transition-colors hover:text-brand-glow"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

@@ -17,7 +17,12 @@ const initialForm = {
   message: "",
 };
 
-export const Contact = () => {
+type ContactProps = {
+  /** Hide the section heading when the page supplies its own. */
+  showHeading?: boolean;
+};
+
+export const Contact = ({ showHeading = true }: ContactProps) => {
   const [form, setForm] = useState(initialForm);
   const [state, setState] = useState<FormState>("idle");
   const [error, setError] = useState("");
@@ -69,11 +74,13 @@ export const Contact = () => {
       <div className="pointer-events-none absolute -bottom-40 left-1/2 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-brand-glow/10 blur-[140px]" />
 
       <div className="container relative z-10">
-        <SectionHeading
-          eyebrow="Get In Touch"
-          title="Let's Talk About Your IT"
-          description="Book a free IT audit or just ask a question — we'll respond within one business day."
-        />
+        {showHeading && (
+          <SectionHeading
+            eyebrow="Get In Touch"
+            title="Let's Talk About Your IT"
+            description="Book a free IT audit or just ask a question — we'll respond within one business day."
+          />
+        )}
 
         <div className="mx-auto mt-14 grid max-w-5xl gap-10 lg:grid-cols-5">
           {/* Contact info */}
