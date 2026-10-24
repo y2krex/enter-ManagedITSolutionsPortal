@@ -6,8 +6,6 @@ import { SectionHeading } from "./section-heading";
 const plans = [
   {
     name: "Essential",
-    price: 99,
-    per: "per user / month",
     description: "Foundational managed IT for small teams.",
     features: [
       "24/7 remote monitoring",
@@ -20,8 +18,6 @@ const plans = [
   },
   {
     name: "Growth",
-    price: 149,
-    per: "per user / month",
     description: "Proactive security and support for scaling companies.",
     features: [
       "Everything in Essential",
@@ -35,8 +31,6 @@ const plans = [
   },
   {
     name: "Enterprise",
-    price: 249,
-    per: "per user / month",
     description: "Full compliance and white-glove service.",
     features: [
       "Everything in Growth",
@@ -83,22 +77,7 @@ export const Pricing = () => {
               <p className="mt-1 text-sm text-muted-foreground">
                 {plan.description}
               </p>
-              <div className="mt-6 flex items-end gap-2">
-                <span className="font-display text-5xl font-bold text-foreground">
-                  ${plan.price}
-                </span>
-                <span className="pb-1.5 text-sm text-muted-foreground">
-                  {plan.per}
-                </span>
-              </div>
-              <Button
-                asChild
-                className="mt-8 w-full"
-                variant={plan.highlighted ? "default" : "outline"}
-              >
-                <a href="#contact">Get Started</a>
-              </Button>
-              <ul className="mt-8 flex flex-col gap-3.5">
+              <ul className="mt-6 flex flex-col gap-3.5">
                 {plan.features.map((feature) => (
                   <li
                     key={feature}
@@ -118,6 +97,15 @@ export const Pricing = () => {
                   </li>
                 ))}
               </ul>
+              <div className="mt-auto pt-8">
+                <Button
+                  asChild
+                  className="w-full"
+                  variant={plan.highlighted ? "default" : "outline"}
+                >
+                  <a href="#contact">Get Started</a>
+                </Button>
+              </div>
             </div>
           ))}
         </div>
