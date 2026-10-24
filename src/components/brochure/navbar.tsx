@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Why Us", href: "#why-us" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Managed Services", href: "#managed-services" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -26,12 +26,12 @@ export const Navbar = () => {
           </span>
         </a>
 
-        <ul className="hidden items-center gap-1 md:flex">
+        <ul className="hidden items-center gap-1 whitespace-nowrap lg:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.label}
               </a>
@@ -39,7 +39,7 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Button asChild size="sm" className="glow-soft">
             <a href="#contact">Get a Free Audit</a>
           </Button>
@@ -48,7 +48,7 @@ export const Navbar = () => {
         <button
           type="button"
           aria-label="Toggle menu"
-          className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-foreground md:hidden"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-foreground lg:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -58,7 +58,7 @@ export const Navbar = () => {
       {/* Mobile menu */}
       <div
         className={cn(
-          "overflow-hidden border-t border-border/60 bg-background/95 backdrop-blur-xl transition-[max-height] duration-300 md:hidden",
+          "overflow-hidden border-t border-border/60 bg-background/95 backdrop-blur-xl transition-[max-height] duration-300 lg:hidden",
           open ? "max-h-96" : "max-h-0 border-t-0",
         )}
       >

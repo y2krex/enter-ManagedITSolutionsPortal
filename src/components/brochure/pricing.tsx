@@ -52,11 +52,11 @@ const plans = [
 
 export const Pricing = () => {
   return (
-    <section id="pricing" className="relative py-24 md:py-32">
+    <section id="managed-services" className="relative py-24 md:py-32">
       <div className="pointer-events-none absolute inset-0 bg-grid bg-grid-fade opacity-40" />
       <div className="container relative z-10">
         <SectionHeading
-          eyebrow="Pricing"
+          eyebrow="Managed Services"
           title="Simple, Flat-Rate Pricing"
           description="No hidden fees, no surprise invoices. One predictable monthly cost covers your entire IT stack."
         />
