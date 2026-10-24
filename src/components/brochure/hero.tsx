@@ -23,11 +23,10 @@ export const Hero = () => {
         </div>
 
         <h1
-          className="animate-fade-up mt-8 max-w-4xl font-display text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl"
+          className="animate-fade-up mt-8 whitespace-nowrap font-display text-[clamp(1.5rem,6.5vw,4.5rem)] font-bold leading-[1.1] tracking-tight text-foreground"
           style={{ animationDelay: "120ms" }}
         >
           Cloud.Managed.
-          <br />
           <span className="text-gradient-brand">Services</span>
         </h1>
 
