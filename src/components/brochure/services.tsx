@@ -53,7 +53,6 @@ export const Services = () => {
       <div className="container">
         <SectionHeading
           eyebrow="What We Do"
-          title="Complete IT, Under One Roof"
           description="Every service your business needs to run on secure, reliable technology — delivered by a single accountable partner."
         />
 

@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 type SectionHeadingProps = {
   eyebrow: string;
-  title: string;
+  title?: string;
   description?: string;
   align?: "center" | "left";
   className?: string;
@@ -27,9 +27,11 @@ export const SectionHeading = ({
         <span className="h-1.5 w-1.5 rounded-full bg-brand-glow" />
         {eyebrow}
       </span>
-      <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl lg:text-[42px]">
-        {title}
-      </h2>
+      {title && (
+        <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl lg:text-[42px]">
+          {title}
+        </h2>
+      )}
       {description && (
         <p
           className={cn(
