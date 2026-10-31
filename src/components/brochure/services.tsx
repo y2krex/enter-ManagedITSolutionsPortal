@@ -53,6 +53,7 @@ export const Services = () => {
       <div className="container">
         <SectionHeading
           eyebrow="What We Do"
+          title="Technology Lives Here"
           description="Every service your business needs to run on secure, reliable technology — delivered by a single accountable partner."
         />
 
