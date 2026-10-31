@@ -18,8 +18,8 @@ const columns = [
       { label: "Why Cloud.Lab", href: "/#why-us" },
       { label: "How It Works", href: "/#how-it-works" },
       { label: "Managed Services", href: "/#managed-services" },
-      { label: "FAQ", href: "/#faq" },
       { label: "Contact", href: "/contact" },
+      { label: "FAQ", href: "/#faq" },
     ],
   },
   {
