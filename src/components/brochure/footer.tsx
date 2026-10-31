@@ -3,7 +3,7 @@ import { CloudCog, Linkedin, Twitter, Youtube } from "lucide-react";
 
 const columns = [
   {
-    title: "Services",
+    title: "Solutions",
     links: [
       { label: "Managed IT Support", href: "/#services" },
       { label: "Cybersecurity", href: "/#services" },
