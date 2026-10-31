@@ -104,18 +104,8 @@ export const Footer = () => {
           <div className="lg:col-span-1" />
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-6 border-t border-border/60 pt-8 md:flex-row">
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {["SOC 2 Type II", "ISO 27001", "HIPAA", "GDPR"].map((badge) => (
-              <span
-                key={badge}
-                className="rounded-md border border-border bg-card/60 px-2.5 py-1 font-mono text-[11px] tracking-wide text-muted-foreground"
-              >
-                {badge}
-              </span>
-            ))}
-          </div>
-          <p className="text-xs text-muted-foreground">
+        <div className="mt-14 border-t border-border/60 pt-8">
+          <p className="text-center text-xs text-muted-foreground">
             © {new Date().getFullYear()} Cloud.Lab. All rights reserved.
           </p>
         </div>
